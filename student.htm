@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hostel Student Information Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f6ff;
+        }
+
+        .form-container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Hostel Student Information Form</h2>
+
+    <!-- POST method added -->
+    <form action="submit.php" method="post">
+
+        <label>Student Name</label>
+        <input type="text" name="student_name" placeholder="Enter full name">
+
+        <label>Roll Number</label>
+        <input type="text" name="roll_no" placeholder="Enter roll number">
+
+        <label>Course</label>
+        <input type="text" name="course" placeholder="e.g. B.Tech / B.Sc">
+
+        <label>Year / Semester</label>
+        <input type="text" name="year_sem" placeholder="e.g. 2nd Year">
+
+        <label>Gender</label>
+        <input list="gender_list" name="gender" placeholder="Select gender">
+        <datalist id="gender_list">
+            <option value="Male">
+            <option value="Female">
+            <option value="Other">
+        </datalist>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob">
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" placeholder="Enter mobile number">
+
+        <label>Email ID</label>
+        <input type="email" name="email" placeholder="Enter email" novalidate>
+
+        <label>Hostel Name</label>
+        <input type="text" name="hostel_name" placeholder="e.g. Cauvery Hostel">
+
+        <label>Room Number</label>
+        <input type="text" name="room_no">
+
+        <label>Permanent Address</label>
+        <textarea rows="3" name="address" placeholder="Enter address"></textarea>
+
+        <label>Parent/Guardian Name</label>
+        <input type="text" name="parent_name">
+
+        <label>Parent/Guardian Contact</label>
+        <input type="tel" name="parent_contact">
+        <br>
+        <label>Mode of Transport</label>
+        <select id="isss" size="3" multiple>
+            <option value="bus">bus
+            <option value="Car">car
+            <option value="areoplane">areoplane
+            </select>
+        <br>
+       <button type="button" onclick="alert('hello world')">Click Me!</button>
+
+        <button class="btn" type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
